@@ -41,7 +41,7 @@ getAllMangas()
 
 const addMangaName = (evt) => {
     evt.preventDefault()
-    
+    console.log('hit frontend line 44')
     console.log(inputField.value)
 
     let body = {
@@ -49,7 +49,7 @@ const addMangaName = (evt) => {
     }
     axios.post(`${baseURL}/api/allMangas`, body)
     .then(res => { 
-
+        console.log('hit frontend line 52')
         getAllMangas()
 
      })

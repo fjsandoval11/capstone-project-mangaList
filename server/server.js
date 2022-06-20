@@ -30,9 +30,5 @@ app.delete('/api/allMangas/:id', controllerFile.deleteManga)
 
 
 
-
-
-
-
 app.listen(PORT, () => console.log(`up on ${PORT}`))
 

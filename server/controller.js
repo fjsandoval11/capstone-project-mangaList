@@ -13,6 +13,11 @@ const sequelize = new Sequelize(DATABASE_URL, {
 
 
 module.exports = {
+
+    // seed: (req,res) => {
+
+    // },
+
     getAllMangas: (req,res) => {
         sequelize.query(`
         SELECT manga_id, name FROM mangas;
