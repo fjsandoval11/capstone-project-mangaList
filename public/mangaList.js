@@ -47,7 +47,7 @@ const addMangaName = (evt) => {
     let body = {
         name: inputField.value
     }
-    axios.post(`http://localhost:4005/api/allMangas`, body)
+    axios.post(`/api/allMangas`, body)
     .then(res => { 
         console.log('hit frontend line 52')
         getAllMangas()
