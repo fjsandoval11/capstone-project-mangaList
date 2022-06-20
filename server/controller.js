@@ -15,7 +15,7 @@ const sequelize = new Sequelize(DATABASE_URL, {
 module.exports = {
     getAllMangas: (req,res) => {
         sequelize.query(`
-        SELECT manga_id, name FROM mangas
+        SELECT manga_id, name FROM mangas;
         `)
         .then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => console.log('ya code aint working g'))
