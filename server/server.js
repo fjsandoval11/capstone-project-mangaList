@@ -5,6 +5,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const cors = require('cors')
+const path = require('path')
 const {PORT} = process.env
 
 
@@ -13,9 +14,11 @@ app.use(cors())
 
 const controllerFile = require('./controller') 
 
-// app.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public/mangaList.html'))
-// })
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/mangaList.html'))
+})
+
+app.use(express.static("client"))
 
 
 app.get('/api/allMangas', controllerFile.getAllMangas)
