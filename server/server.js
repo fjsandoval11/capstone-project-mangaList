@@ -11,6 +11,7 @@ const {PORT} = process.env
 
 app.use(express.json())
 app.use(cors())
+app.use(express.static("public"))
 
 const controllerFile = require('./controller') 
 
@@ -18,7 +19,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/mangaList.html'))
 })
 
-app.use(express.static("client"))
+
 
 
 app.get('/api/allMangas', controllerFile.getAllMangas)
