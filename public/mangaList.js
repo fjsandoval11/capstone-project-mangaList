@@ -8,6 +8,12 @@ const mangaList = document.querySelector('#manga-list')
 
 const baseURL = "http://localhost:4005"
 
+const deleteCard = (id) => {
+    axios.delete(`${baseURL}/api/allMangas/${id}`)
+    .then(()=> getAllMangas())
+    .catch(err => console.log(err))
+}
+
 
 const getAllMangas = () => {
     mangaList.innerHTML = ''
@@ -18,13 +24,11 @@ const getAllMangas = () => {
         console.log(mangaArr)
         
         mangaArr.forEach(manga => {
-            let {name} = manga
-            // let listItem = document.createElement('li')
-            // listItem.textContent = (`${name}`)
-            // mangaList.appendChild(listItem)
+            let {manga_id, name} = manga
+
             let mangaCard = `<div class="manga-card">
                 <h2>${name}</h2>
-            <button onclick="deleteCard(${manga['manga_id']})">Delete</button>
+            <button onclick="deleteCard(${manga_id})">Delete</button>
             
             </div>`
             mangaList.innerHTML += mangaCard
@@ -33,6 +37,7 @@ const getAllMangas = () => {
 }
 
 getAllMangas()
+
 
 const addMangaName = (evt) => {
     evt.preventDefault()
@@ -54,11 +59,7 @@ const addMangaName = (evt) => {
         
 }
 
-const deleteCard = (id) => {
-    axios.delete(`${baseURL}/api/allMangas/${id}`)
-    .then(()=> getAllMangas())
-    .catch(err => console.log(err))
-}
+
 
 
 
