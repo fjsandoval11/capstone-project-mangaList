@@ -1,6 +1,5 @@
-* {
-    margin: 0px;
-    padding: 0px;
+html{
+    height: 100%;
 }
 
 body{
@@ -43,7 +42,7 @@ h1{
 
 .manga-card{
     
-
+    
     color: white;
     font-size: 10px;
     text-shadow:
@@ -52,8 +51,12 @@ h1{
         -0.07em 0 black,
         0 -0.07em black;
 
+    
     padding: 5px;
     margin: 5px;
+
+    border: 2px solid black; 
+    background-color: rgba(128, 128, 128, 0.6); 
    
 }
 
@@ -64,11 +67,15 @@ h1{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    /* width: 50vw;
 
-    padding: 10px; border: 2px solid white; background-color: rgba(128, 128, 128, 0.6);
+    padding: 10px;
+    margin: auto;
+
+   
+    border: 2px solid black; 
+    background-color: rgba(128, 128, 128, 0.6); */
     
-   border: 2px solid black;
-   padding: 10px;
-   margin: 5px;
+   
 
 }

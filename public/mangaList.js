@@ -6,10 +6,10 @@ const inputField = document.querySelector('#manga-input-field')
 const mangaList = document.querySelector('#manga-list')
 
 
-const baseURL = "http://localhost:4005"
+// const baseURL = "http://localhost:4005"
 
 const deleteCard = (id) => {
-    axios.delete(`${baseURL}/api/allMangas/${id}`)
+    axios.delete(`/api/allMangas/${id}`)
     .then(()=> getAllMangas())
     .catch(err => console.log(err))
 }
@@ -18,7 +18,7 @@ const deleteCard = (id) => {
 const getAllMangas = () => {
     mangaList.innerHTML = ''
 
-    axios.get(`${baseURL}/api/allMangas`)
+    axios.get(`/api/allMangas`)
     .then(res => {
         const mangaArr = res.data
         console.log(mangaArr)
@@ -47,7 +47,7 @@ const addMangaName = (evt) => {
     let body = {
         name: inputField.value
     }
-    axios.post(`${baseURL}/api/allMangas`, body)
+    axios.post(`/api/allMangas`, body)
     .then(res => { 
         console.log('hit frontend line 52')
         getAllMangas()
