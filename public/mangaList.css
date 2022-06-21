@@ -9,6 +9,7 @@ body{
     background-image: url(/public/imgs/howlsMovingCastle2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
 }
 
 h1{
