@@ -4,9 +4,7 @@
 }
 
 body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  
 
 
     background-image: url(/public/imgs/howlsMovingCastle2.jpg);
@@ -15,6 +13,10 @@ body{
 }
 
 h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     color: white;
     font-size: 50px;
     text-shadow:
@@ -25,22 +27,48 @@ h1{
 }
 
 #manga-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     padding:  20px;
     margin: 20px;
 }
 
 #manga-input-field{
+
     height: 50px;
     /* width: 200px; */
+}
+
+.manga-card{
+    
+
+    color: white;
+    font-size: 10px;
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+
+    padding: 5px;
+    margin: 5px;
+   
 }
 
 
 
 
-/* o#manga-list{
-    background: #fbd1a2;
+#manga-list{
     display: flex;
-    flex-direction: column;
-    flex-wrap: ;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-} */
+    padding: 10px; border: 2px solid white; background-color: rgba(128, 128, 128, 0.6);
+    
+   border: 2px solid black;
+   padding: 10px;
+   margin: 5px;
+
+}
