@@ -20,7 +20,7 @@ module.exports = {
 
     getAllMangas: (req,res) => {
         sequelize.query(`
-        SELECT manga_id, name FROM mangas;
+        SELECT manga_id, name, img_url, manga_link FROM mangas;
         `)
         .then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => console.log('ya code aint working g'))
@@ -28,11 +28,11 @@ module.exports = {
     },
 
     addManga: (req,res) => {
-        const {name} = req.body
+        let {name, img_url, manga_link} = req.body
 
         sequelize.query(`
-        INSERT INTO mangas(name)
-        VALUES('${name}');
+        INSERT INTO mangas(name, img_url, manga_link)
+        VALUES('${name}','${img_url}','${manga_link}');
         
         `)
         .then(dbRes => {
