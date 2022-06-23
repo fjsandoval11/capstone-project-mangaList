@@ -17,4 +17,4 @@ Axios
 Express
 Postgress sql
 
-[!alt text](https://github.com/fjsandoval11/capstone-project-mangaList/blob/main/public/imgs/readMe.png)
+![MangaList Tracker](https://github.com/fjsandoval11/capstone-project-mangaList/blob/main/public/imgs/readMe.png)
