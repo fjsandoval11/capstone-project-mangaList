@@ -1,4 +1,4 @@
-#Learn more about the developer:
+#Learn more about the developer:#
 
 LinkedIn: https://www.linkedin.com/in/devfreddysandoval/
 
